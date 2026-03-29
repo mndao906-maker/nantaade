@@ -1,0 +1,100 @@
+/* ============================================================
+   ÑANTAADÉ — Base Styles & Design Tokens
+   ============================================================ */
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  /* Palette */
+  --noir:       #0d0b08;
+  --terre:      #2c1f10;
+  --sable:      #c4a882;
+  --or:         #c9972a;
+  --or-clair:   #e8c872;
+  --creme:      #f5ede0;
+  --blanc:      #faf8f4;
+  --gris-chaud: #8a7d70;
+  --accent:     #b05c2a;
+  --danger:     #c0392b;
+  --success:    #2e7d52;
+
+  /* Typography */
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-ui:      'Josefin Sans', 'Helvetica Neue', sans-serif;
+  --font-body:    'Tenor Sans', Georgia, serif;
+
+  /* Spacing */
+  --space-xs:  8px;
+  --space-sm:  16px;
+  --space-md:  32px;
+  --space-lg:  60px;
+  --space-xl:  120px;
+
+  /* Transitions */
+  --ease-out:  cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in:   cubic-bezier(0.7, 0, 0.84, 0);
+  --duration:  0.4s;
+
+  /* Z-index layers */
+  --z-base:    1;
+  --z-nav:     1000;
+  --z-drawer:  4000;
+  --z-overlay: 3999;
+  --z-modal:   4500;
+  --z-toast:   5000;
+  --z-cursor:  9999;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--noir);
+  color: var(--creme);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ---- Scrollbar ---- */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--noir); }
+::-webkit-scrollbar-thumb { background: rgba(201,151,42,0.3); border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: var(--or); }
+
+/* ---- Selection ---- */
+::selection { background: rgba(201,151,42,0.25); color: var(--or-clair); }
+
+/* ---- Focus visible ---- */
+:focus-visible {
+  outline: 1px solid var(--or);
+  outline-offset: 3px;
+}
+
+/* ---- Images ---- */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ---- Buttons reset ---- */
+button { font-family: inherit; }
+a { text-decoration: none; }
+
+/* ---- Utility classes ---- */
+.sr-only {
+  position: absolute; width: 1px; height: 1px;
+  padding: 0; margin: -1px; overflow: hidden;
+  clip: rect(0,0,0,0); border: 0;
+}
+.no-scroll { overflow: hidden; }
+.text-or { color: var(--or); }
+.text-or-clair { color: var(--or-clair); }
+.text-gris { color: var(--gris-chaud); }

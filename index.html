@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ñantaadé — Révélez votre prestance</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Tenor+Sans&family=Josefin+Sans:wght@100;200;300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+<!-- NAV -->
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="#" class="nav-logo">Ñ<span>antaadé</span></a>
+  <ul class="nav-links">
+    <li><a href="#">Révélez votre prestance</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="nav-icon">🔍</span>
+    <span class="nav-icon">♡</span>
+    <a href="#" class="nav-cart"><span>Panier (0)</span></a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-pattern"></div>
+  <div class="hero-visual">
+    <div class="hero-silhouette"></div>
+    <div class="hero-lines"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-label">Collection Printemps 2025</div>
+    <h1 class="hero-title">
+      L'élégance <em>est une<br>philosophie</em>
+    </h1>
+    <p class="hero-slogan">Révélez votre prestance</p>
+    <div class="hero-ctas">
+      <a href="#" class="btn-primary"><span>Découvrir la collection</span></a>
+      <a href="#" class="btn-secondary">Notre lookbook</a>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Défiler</span>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee-band">
+  <div class="marquee-track">
+    <div class="marquee-item">Vêtements de Luxe</div>
+    <div class="marquee-item">Chaussures Élégantes</div>
+    <div class="marquee-item">Maroquinerie Premium</div>
+    <div class="marquee-item">Nouvelle Collection</div>
+    <div class="marquee-item">Vêtements de Luxe</div>
+    <div class="marquee-item">Chaussures Élégantes</div>
+    <div class="marquee-item">Maroquinerie Premium</div>
+    <div class="marquee-item">Nouvelle Collection</div>
+    <div class="marquee-item">Vêtements de Luxe</div>
+    <div class="marquee-item">Chaussures Élégantes</div>
+    <div class="marquee-item">Maroquinerie Premium</div>
+    <div class="marquee-item">Nouvelle Collection</div>
+  </div>
+</div>
+
+<!-- CATÉGORIES -->
+<section class="categories" id="categories">
+  <div class="categories-header">
+    <div>
+      <div class="section-label">Explorer par univers</div>
+      <h2 class="section-title">Nos <em>Univers</em></h2>
+    </div>
+    <a href="#" class="btn-secondary">Voir tout</a>
+  </div>
+  <div class="categories-grid">
+    <div class="cat-card">
+      <div class="cat-bg cat-bg-homme"></div>
+      <div class="cat-pattern"></div>
+      <div class="cat-overlay"></div>
+      <div class="cat-deco"></div>
+      <div class="cat-content">
+        <div class="cat-tag">Collection Homme</div>
+        <div class="cat-name">Homme</div>
+        <a href="#collection" class="cat-link" data-filter="homme">Explorer la collection</a>
+      </div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-bg cat-bg-femme"></div>
+      <div class="cat-pattern"></div>
+      <div class="cat-overlay"></div>
+      <div class="cat-deco"></div>
+      <div class="cat-content">
+        <div class="cat-tag">Collection Femme</div>
+        <div class="cat-name">Femme</div>
+        <a href="#collection" class="cat-link" data-filter="femme">Explorer la collection</a>
+      </div>
+    </div>
+    <div class="cat-card">
+      <div class="cat-bg cat-bg-jeune"></div>
+      <div class="cat-pattern"></div>
+      <div class="cat-overlay"></div>
+      <div class="cat-deco"></div>
+      <div class="cat-content">
+        <div class="cat-tag">Collection Jeune</div>
+        <div class="cat-name">Jeune</div>
+        <a href="#collection" class="cat-link" data-filter="jeune">Explorer la collection</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- COLLECTION -->
+<section class="collection" id="collection">
+  <div class="collection-header">
+    <div class="section-label" style="justify-content:center">Sélection du moment</div>
+    <h2 class="section-title">Nouvelles <em>Arrivées</em></h2>
+  </div>
+  <div class="collection-tabs">
+    <button class="tab-btn active" onclick="setTab(this)" data-category="tout">Tout</button>
+    <button class="tab-btn" onclick="setTab(this)" data-category="vetements">Vêtements</button>
+    <button class="tab-btn" onclick="setTab(this)" data-category="chaussures">Chaussures</button>
+    <button class="tab-btn" onclick="setTab(this)" data-category="sacs">Sacs</button>
+  </div>
+  <div class="products-grid" id="products-grid">
+    <div class="product-card" data-category="vetements" data-gender="homme" id="product-1">
+      <div class="product-img">
+        <div class="product-img-bg p1"></div>
+        <div class="product-icon">👔</div>
+        <div class="product-badge">Nouveau</div>
+        <div class="product-quick"><span>Aperçu rapide</span></div>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">Vêtements · Homme</div>
+        <div class="product-name">Blazer Kaftan Émeraude</div>
+        <div class="product-price">
+          <span class="price-main">189 000 FCFA</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card" data-category="vetements" data-gender="femme" id="product-2">
+      <div class="product-img">
+        <div class="product-img-bg p2"></div>
+        <div class="product-icon">👗</div>
+        <div class="product-badge">Exclusif</div>
+        <div class="product-quick"><span>Aperçu rapide</span></div>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">Vêtements · Femme</div>
+        <div class="product-name">Robe Soirée Nuit Dorée</div>
+        <div class="product-price">
+          <span class="price-main">245 000 FCFA</span>
+          <span class="price-old">290 000</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card" data-category="sacs" data-gender="femme" id="product-3">
+      <div class="product-img">
+        <div class="product-img-bg p3"></div>
+        <div class="product-icon">👜</div>
+        <div class="product-quick"><span>Aperçu rapide</span></div>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">Sacs · Femme</div>
+        <div class="product-name">Pochette Cuir Sculptée</div>
+        <div class="product-price">
+          <span class="price-main">98 000 FCFA</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card" data-category="chaussures" data-gender="homme" id="product-4">
+      <div class="product-img">
+        <div class="product-img-bg p4"></div>
+        <div class="product-icon">👞</div>
+        <div class="product-badge">Bestseller</div>
+        <div class="product-quick"><span>Aperçu rapide</span></div>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">Chaussures · Homme</div>
+        <div class="product-name">Derby Cuir Milano</div>
+        <div class="product-price">
+          <span class="price-main">145 000 FCFA</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card" data-category="vetements" data-gender="femme" id="product-5">
+      <div class="product-img">
+        <div class="product-img-bg p1"></div>
+        <div class="product-icon">👗</div>
+        <div class="product-quick"><span>Aperçu rapide</span></div>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">Vêtements · Femme</div>
+        <div class="product-name">Kimono Soie Ivoire</div>
+        <div class="product-price">
+          <span class="price-main">215 000 FCFA</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card" data-category="sacs" data-gender="homme" id="product-6">
+      <div class="product-img">
+        <div class="product-img-bg p2"></div>
+        <div class="product-icon">👜</div>
+        <div class="product-badge">Nouveau</div>
+        <div class="product-quick"><span>Aperçu rapide</span></div>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">Sacs · Homme</div>
+        <div class="product-name">Sac Cuir Brun Caramel</div>
+        <div class="product-price">
+          <span class="price-main">125 000 FCFA</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card" data-category="chaussures" data-gender="femme" id="product-7">
+      <div class="product-img">
+        <div class="product-img-bg p3"></div>
+        <div class="product-icon">👠</div>
+        <div class="product-quick"><span>Aperçu rapide</span></div>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">Chaussures · Femme</div>
+        <div class="product-name">Escarpins Dorés Élégants</div>
+        <div class="product-price">
+          <span class="price-main">168 000 FCFA</span>
+          <span class="price-old">195 000</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card" data-category="vetements" data-gender="jeune" id="product-8">
+      <div class="product-img">
+        <div class="product-img-bg p4"></div>
+        <div class="product-icon">👕</div>
+        <div class="product-quick"><span>Aperçu rapide</span></div>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">Vêtements · Jeune</div>
+        <div class="product-name">T-Shirt Premium Noir</div>
+        <div class="product-price">
+          <span class="price-main">42 000 FCFA</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card" data-category="sacs" data-gender="jeune" id="product-9">
+      <div class="product-img">
+        <div class="product-img-bg p1"></div>
+        <div class="product-icon">👜</div>
+        <div class="product-badge">Exclusif</div>
+        <div class="product-quick"><span>Aperçu rapide</span></div>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">Sacs · Jeune</div>
+        <div class="product-name">Backpack Urban Chic</div>
+        <div class="product-price">
+          <span class="price-main">89 000 FCFA</span>
+        </div>
+      </div>
+    </div>
+    <div class="product-card" data-category="chaussures" data-gender="jeune" id="product-10">
+      <div class="product-img">
+        <div class="product-img-bg p2"></div>
+        <div class="product-icon">👟</div>
+        <div class="product-quick"><span>Aperçu rapide</span></div>
+      </div>
+      <div class="product-info">
+        <div class="product-cat">Chaussures · Jeune</div>
+        <div class="product-name">Sneakers Minimalistes</div>
+        <div class="product-price">
+          <span class="price-main">85 000 FCFA</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BRAND STORY -->
+<section class="brand-story" id="brand-story">
+  <div class="story-visual">
+    <div class="story-frame">
+      <div class="story-frame-pattern"></div>
+      <div class="story-frame-br"></div>
+    </div>
+    <div class="story-accent"></div>
+  </div>
+  <div class="story-text">
+    <div class="section-label">Notre Maison</div>
+    <h2 class="section-title">L'art de <em>la prestance</em></h2>
+    <p class="story-quote">
+      "La mode passe,<br><em>le style demeure.</em>"
+    </p>
+    <p class="story-body">
+      Nous croyons que chaque personne porte en elle une prestance naturelle,<br>et que le vêtement n'est pas seulement un habit, mais une expression de soi. Ñantaadé, ce n'est pas suivre la mode.<br>C'est imposer son style.
+    </p>
+    <a href="#" class="btn-primary"><span>Notre histoire</span></a>
+  </div>
+</section>
+
+<!-- LOOKBOOK -->
+<section class="lookbook" id="lookbook">
+  <div class="lookbook-header">
+    <div class="section-label">Saison 2025</div>
+    <h2 class="section-title">Le <em>Lookbook</em></h2>
+  </div>
+  <div class="lookbook-scroll">
+    <div class="look-item">
+      <div class="look-img">
+        <div class="look-img-bg l1"></div>
+        <div class="look-number">01</div>
+        <div class="look-overlay"></div>
+      </div>
+      <div class="look-info">
+        <div class="look-season">Printemps 2025</div>
+        <div class="look-title">Crépuscule Saharien</div>
+      </div>
+    </div>
+    <div class="look-item">
+      <div class="look-img">
+        <div class="look-img-bg l2"></div>
+        <div class="look-number">02</div>
+        <div class="look-overlay"></div>
+      </div>
+      <div class="look-info">
+        <div class="look-season">Printemps 2025</div>
+        <div class="look-title">Nuits de Dakar</div>
+      </div>
+    </div>
+    <div class="look-item">
+      <div class="look-img">
+        <div class="look-img-bg l3"></div>
+        <div class="look-number">03</div>
+        <div class="look-overlay"></div>
+      </div>
+      <div class="look-info">
+        <div class="look-season">Printemps 2025</div>
+        <div class="look-title">Émeraude du Sahel</div>
+      </div>
+    </div>
+    <div class="look-item">
+      <div class="look-img">
+        <div class="look-img-bg l4"></div>
+        <div class="look-number">04</div>
+        <div class="look-overlay"></div>
+      </div>
+      <div class="look-info">
+        <div class="look-season">Printemps 2025</div>
+        <div class="look-title">Cuivre & Ébène</div>
+      </div>
+    </div>
+    <div class="look-item">
+      <div class="look-img">
+        <div class="look-img-bg l5"></div>
+        <div class="look-number">05</div>
+        <div class="look-overlay"></div>
+      </div>
+      <div class="look-info">
+        <div class="look-season">Printemps 2025</div>
+        <div class="look-title">Minuit Atlantique</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter">
+  <div class="newsletter-content">
+    <div class="section-label" style="justify-content:center">Restez dans l'élégance</div>
+    <h2 class="newsletter-title">Rejoignez le cercle<br><em style="font-style:italic;color:var(--or-clair)">Ñantaadé</em></h2>
+    <p class="newsletter-sub">Recevez en avant-première nos nouvelles collections, les invitations aux événements privés et des offres exclusives réservées à nos membres.</p>
+    <div class="newsletter-form">
+      <input type="email" class="newsletter-input" placeholder="Votre adresse email">
+      <button class="newsletter-btn">S'inscrire</button>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-logo-block">
+      <span class="footer-logo">Ñantaadé</span>
+      <p class="footer-slogan">Révélez votre prestance</p>
+      <div class="footer-social">
+        <a href="https://facebook.com/share/17MYJZ6zmm/?mibextid=wwXIfr" class="social-link">f</a>
+        <a href="https://www.tiktok.com/@nantaade?is_from_webapp=1&sender_device=pc" class="social-link">tk</a>
+        <a href="https://www.instagram.com/nantaade_sn?igsh=NGMzZGRnajU5eXNn&utm_source=qr" class="social-link">📷</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">Collections</div>
+      <ul class="footer-links">
+        <li><a href="#">Homme</a></li>
+        <li><a href="#">Femme</a></li>
+        <li><a href="#">Jeune</a></li>
+        <li><a href="#">Vêtements</a></li>
+        <li><a href="#">Chaussures</a></li>
+        <li><a href="#">Sacs & Accessoires</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Service Client</div>
+      <ul class="footer-links">
+        <li><a href="#">Guide des tailles</a></li>
+        <li><a href="#">Livraison</a></li>
+        <li><a href="#">Retours & échanges</a></li>
+        <li><a href="#">FAQ</a></li>
+        <li><a href="#">Contactez-nous</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">La Maison</div>
+      <ul class="footer-links">
+        <li><a href="#">Notre histoire</a></li>
+        <li><a href="#">Nos valeurs</a></li>
+        <li><a href="#">Lookbook</a></li>
+        <li><a href="#">Presse</a></li>
+        <li><a href="#">Partenariats</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span class="footer-copy">© 2025 Ñantaadé · Tous droits réservés · Politique de confidentialité</span>
+    <div class="footer-payment">
+      <span class="payment-badge">Visa</span>
+      <span class="payment-badge">Mastercard</span>
+      <span class="payment-badge">Wave</span>
+      <span class="payment-badge">Orange Money</span>
+      <span class="payment-badge">Cinetpay</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
