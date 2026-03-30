@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Collection Homme — Ñantaadé</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Tenor+Sans&family=Josefin+Sans:wght@100;200;300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/main.css">
+<link rel="stylesheet" href="css/collections.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="navbar">
+  <a href="index.html" class="nav-logo">Ñ<span>antaadé</span></a>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="collections-homme.html" class="active-link">Homme</a></li>
+    <li><a href="collections-femme.html">Femme</a></li>
+    <li><a href="collections-jeune.html">Jeune</a></li>
+  </ul>
+  <div class="nav-right">
+    <span class="nav-icon">🔍</span>
+    <span class="nav-icon">♡</span>
+    <a href="#" class="nav-cart"><span>Panier (0)</span></a>
+  </div>
+</nav>
+
+<!-- COLLECTION HOMME -->
+<section class="collection-page">
+  <div class="collection-hero" style="background: linear-gradient(135deg, rgba(44,31,16,0.8) 0%, rgba(176,92,42,0.3) 100%);">
+    <div class="collection-hero-content">
+      <h1 class="collection-title">Collection <em>Homme</em></h1>
+      <p class="collection-subtitle">Élégance et prestance pour l'homme moderne</p>
+    </div>
+  </div>
+
+  <!-- FORMULAIRE D'AJOUT DE PRODUIT -->
+  <div class="add-product-section">
+    <div class="add-product-container">
+      <h2>Ajouter un produit</h2>
+      <form id="add-product-form" class="product-form">
+        <div class="form-group">
+          <label for="product-name">Nom du produit *</label>
+          <input type="text" id="product-name" required placeholder="Ex: Blazer Kaftan Émeraude">
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="product-category">Catégorie *</label>
+            <select id="product-category" required>
+              <option value="">Sélectionner...</option>
+              <option value="vetements">Vêtements</option>
+              <option value="chaussures">Chaussures</option>
+              <option value="sacs">Sacs</option>
+              <option value="accessoires">Accessoires</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="product-price">Prix *</label>
+            <input type="text" id="product-price" required placeholder="Ex: 189 000 FCFA">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label for="product-icon">Emoji/Icône</label>
+            <input type="text" id="product-icon" placeholder="Ex: 👔" maxlength="2">
+          </div>
+          <div class="form-group">
+            <label for="product-badge">Badge (optionnel)</label>
+            <input type="text" id="product-badge" placeholder="Ex: Nouveau, Exclusif">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="product-description">Description</label>
+          <textarea id="product-description" placeholder="Description du produit..." rows="3"></textarea>
+        </div>
+        <button type="submit" class="btn-primary">
+          <span>Ajouter le produit</span>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- GRILLE DE PRODUITS -->
+  <div class="products-section">
+    <div class="products-header">
+      <h2>Produits Homme</h2>
+      <div class="products-controls">
+        <input type="text" id="search-products" placeholder="Rechercher..." class="search-input">
+        <select id="filter-category" class="filter-select">
+          <option value="">Toutes les catégories</option>
+          <option value="vetements">Vêtements</option>
+          <option value="chaussures">Chaussures</option>
+          <option value="sacs">Sacs</option>
+          <option value="accessoires">Accessoires</option>
+        </select>
+      </div>
+    </div>
+    <div class="products-grid" id="products-grid">
+      <!-- Les produits seront ajoutés dynamiquement ici -->
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-content">
+    <p>&copy; 2025 Ñantaadé — Révélez votre prestance</p>
+    <div class="footer-links">
+      <a href="#">Mentions légales</a>
+      <a href="#">Politique de confidentialité</a>
+      <a href="#">Contactez-nous</a>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/collections.js"></script>
+<script>
+  // Initialiser la collection homme au chargement
+  document.addEventListener('DOMContentLoaded', function() {
+    initializeCollection('homme');
+  });
+</script>
+
+</body>
+</html>

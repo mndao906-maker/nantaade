@@ -44,6 +44,13 @@ nav.scrolled {
   position: relative;
   cursor: pointer;
 }
+.nav-links a.active-link {
+  color: var(--or-clair);
+  opacity: 1;
+}
+.nav-links a.active-link::after {
+  transform: scaleX(1);
+}
 .nav-links a::after {
   content: '';
   position: absolute; bottom: -4px; left: 0; right: 0;
