@@ -157,19 +157,43 @@ document.addEventListener('DOMContentLoaded', function() {
     });     
   }
 
-  // ========== ICÔNES NAV & APERÇU POPUP ==========
-  const navIcons = document.querySelectorAll('.nav-icon');
-  navIcons.forEach(icon => {
-    icon.addEventListener('click', function(e) {
-      e.preventDefault();
-      if (this.textContent.includes('🔍')) {
-        console.log('Recherche ouverte');
-      } else if (this.textContent.includes('♡')) {
-        console.log('Favoris ouvert');
-      }
-    });
+  // ========== NAV LINKS ACTIVE STATE ==========
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+  navLinks.forEach(link => {
+    const href = link.getAttribute('href');
+    if (href === currentPage || (currentPage === '' && href === 'index.html')) {
+      link.classList.add('active-link');
+    } else {
+      link.classList.remove('active-link');
+    }
   });
 
+  // ========== RECHERCHE NAVBAR ==========
+  const navSearchInput = document.querySelector('.nav-search-input');
+  if (navSearchInput) {
+    navSearchInput.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        const query = this.value.trim().toLowerCase();
+        if (!query) return;
+        if (query.includes('homme')) {
+          window.location.href = 'collections-homme.html';
+        } else if (query.includes('femme')) {
+          window.location.href = 'collections-femme.html';
+        } else if (query.includes('jeune')) {
+          window.location.href = 'collections-jeune.html';
+        } else if (query.includes('lookbook')) {
+          window.location.href = 'lookbook.html';
+        } else if (query.includes('découvrir') || query.includes('collection')) {
+          window.location.href = 'decouvrir-collection.html';
+        } else {
+          alert('Recherche non trouvée. Essayez "homme", "femme", "jeune", "lookbook" ou "collection".');
+        }
+      }
+    });
+  }
+
+  // ========== PRODUCT ICON PREVIEW ==========
   productCards.forEach(card => {
     const icon = card.querySelector('.product-icon');
     if (icon) {
