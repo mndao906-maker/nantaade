@@ -62,7 +62,28 @@ nav.scrolled {
 .nav-links a:hover { opacity: 1; color: var(--or-clair); }
 .nav-links a:hover::after { transform: scaleX(1); }
 .nav-right {
-  display: flex; align-items: center; gap: 24px;
+  display: flex; align-items: center; gap: 16px;
+}
+.nav-search {
+  position: relative;
+}
+.nav-search-input {
+  height: 36px;
+  width: 200px;
+  padding: 6px 12px;
+  border: 1px solid rgba(255,255,255,0.35);
+  background: rgba(255,255,255,0.12);
+  color: var(--creme);
+  border-radius: 22px;
+  font-family: var(--font-ui);
+  font-size: 0.82rem;
+  transition: all 0.25s ease;
+}
+.nav-search-input:focus {
+  outline: none;
+  width: 250px;
+  background: rgba(255,255,255,0.2);
+  border-color: var(--or);
 }
 .nav-icon {
   color: var(--creme); opacity: 0.8;
